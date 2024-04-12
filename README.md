@@ -10,7 +10,6 @@ MJML preview, lint, compile for Visual Studio Code.
 * Inline errors (squiggle underlines). Linter based on [atom-linter-mjml](https://github.com/mjmlio/atom-linter-mjml).
 * Export HTML file from MJML.
 * Copy the result HTML to clipboard.
-* Take a screenshot of the rendered MJML document.
 * Send email with Nodemailer or Mailjet.
 * Code snippets for MJML. Based on [mjml-syntax](https://github.com/mjmlio/mjml-syntax).
 * Fetch official templates. Based on [mjml-app](https://github.com/mjmlio/mjml-app).
@@ -18,6 +17,7 @@ MJML preview, lint, compile for Visual Studio Code.
 * Migrate a template from MJML 3 to MJML 4.
 * MJML syntax highlight. Based on [mjml-syntax](https://github.com/mjmlio/mjml-syntax).
 * Built-in MJML documentation with `Try it live` support.
+* Support Custom Components
 
 ## It looks like this
 
@@ -40,9 +40,7 @@ The following command is available:
 * **MJML: Copy HTML** Copy the result HTML to clipboard.
 * **MJML: Export HTML** Export HTML file from MJML.
 * **MJML: Migrate** Migrate a template from MJML 3 to MJML 4.
-* **MJML: Multiple Screenshots** Take multiple screenshots of the rendered MJML document.
 * **MJML: Open Preview to the Side** Opens a preview in a column alongside the current document.
-* **MJML: Screenshot** Take a screenshot of the rendered MJML document, and save it as a file.
 * **MJML: Send Email** Send email with Nodemailer or Mailjet.
 * **MJML: Template** Fetch official templates.
 * **MJML: Documentation** open the MJML documentation.
@@ -69,10 +67,6 @@ The following command is available:
 | `mjml.minifyHtmlOutput` | `true` | Minify HTML output. |
 | `mjml.nodemailer` | `{}` | Nodemailer configuration. Please see the [Nodemailer](https://nodemailer.com) documentation for more information. |
 | `mjml.preserveFocus` | `true` | Preserve focus of Text Editor after preview open. |
-| `mjml.screenshotQuality` | `75` | Screenshot quality. |
-| `mjml.screenshotType` | `jpg` | Screenshot type. Possible values are 'png', 'jpg', and 'jpeg'. |
-| `mjml.screenshotWidth` | `650` | Screenshot width. |
-| `mjml.screenshotWidths` | `640,750` | Screenshot widths. |
 | `mjml.updateWhenTyping` | `true` | Update preview when typing. |
 | `mjml.previewBackgroundColor` | ` ` | Preview background color. |
 | `mjml.autoClosePreview` | `true` | Automatically close preview when all open MJML documents have been closed. |

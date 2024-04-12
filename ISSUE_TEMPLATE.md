@@ -20,10 +20,6 @@ Please provide a description of the actual behavior you observe.
 Please provide a code snippet.
 ```
 
-## Screenshot / GIF
-
-Please attach screenshot/gif if you consider them as helpful to understand/reproduce the issue.
-
 ## Specifications
 
   - VS Code version:

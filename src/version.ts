@@ -18,7 +18,7 @@ export default class Version {
             try {
                 const data: any = JSON.parse(readFileSync(filePath, 'utf8'))
                 window.showInformationMessage(`MJML version: ${data.version}`)
-            } catch (error) {
+            } catch (error: any) {
                 window.showErrorMessage(error.message)
             }
         }

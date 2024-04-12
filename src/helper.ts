@@ -4,7 +4,7 @@ import { TextDocument, TextEditor, window, workspace } from 'vscode'
 
 import { html as jsBeautify } from 'js-beautify'
 import { getExtension, getType as getMimeType } from 'mime'
-import * as mjml2html from 'mjml'
+import mjml2html from 'mjml'
 
 export function renderMJML(
     cb: (content: string) => any,
@@ -55,9 +55,12 @@ export function mjmlToHtml(
     validation: 'strict' | 'soft' | 'skip' = 'skip',
 ): { html: string; errors: any[] } {
     try {
+
         if (!path) {
             path = getPath()
         }
+
+        window.showInformationMessage(getCWD(path));
 
         return mjml2html(mjml, {
             beautify,
@@ -107,7 +110,7 @@ export function beautifyHTML(mjml: string): string | undefined {
 
         return beautified
     } catch (error) {
-        window.showErrorMessage(error)
+        window.showErrorMessage(error as string)
 
         return
     }
@@ -122,8 +125,16 @@ export function getPath(): string {
 }
 
 function getCWD(mjmlPath?: string): string {
-    if (workspace.rootPath) {
-        return workspace.rootPath
+    const currentUri = window.activeTextEditor?.document.uri;
+
+    if(currentUri){
+        if(currentUri){
+            const currentWorkspace = workspace.getWorkspaceFolder(currentUri)
+            if(currentWorkspace){
+                const mjmlConfigPath = `${currentWorkspace.uri.path}/.mjmlconfig`;
+                return mjmlConfigPath;
+            }
+        }
     }
 
     return mjmlPath ? parsePath(mjmlPath).dir : ''

@@ -2,6 +2,11 @@
 All notable changes to the "mjml" extension will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+
+### [1.7.0] (2024-04-12)
+* [new] Support Custom Component declared in `.mjmlconfig`
+* MJML 4.15.2
+
 ### [1.6.0] (2018-10-28)
 * [new] Configuration property `mjml.templateGallery`: Show the template gallery instead of quick pick.
 * [new] Configuration property `mjml.templateGalleryAutoClose`: Automatically close template gallery when selecting a template.

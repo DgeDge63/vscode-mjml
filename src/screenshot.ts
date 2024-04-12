@@ -41,7 +41,7 @@ export default class Screenshot {
                 title: `MJML needs to be rebuilt for your current platform. Please wait for the installation to finish...`,
             },
             async () => {
-                return new Promise((resolve, reject) => {
+                return new Promise<void>((resolve, reject) => {
                     process.chdir(joinPath(__dirname, '..'))
 
                     load(
@@ -233,7 +233,7 @@ export default class Screenshot {
                     }
 
                     await instance.exit()
-                } catch (error) {
+                } catch (error:any) {
                     window.showErrorMessage(error.message)
                 }
             },

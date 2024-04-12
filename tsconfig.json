@@ -5,7 +5,7 @@
         "lib": [
             "es6"
         ],
-        "module": "commonjs",
+        "module": "Node16",
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,
         "noImplicitReturns": true,
@@ -24,7 +24,8 @@
         "typeRoots": [
             "./node_modules/@types",
             "./typings/"
-        ]
+        ],
+        "skipLibCheck": true
     },
     "exclude": [
         "./documentation",
