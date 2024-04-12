@@ -2,7 +2,7 @@
   "name": "vscode-mjml-ggu",
   "displayName": "MJML - With Custom Components",
   "description": "unofficial fork of MJML plugin",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "publisher": "GaetanGuillot",
   "license": "MIT",
   "readme": "README.md",

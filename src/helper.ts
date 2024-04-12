@@ -60,8 +60,6 @@ export function mjmlToHtml(
             path = getPath()
         }
 
-        window.showInformationMessage(getCWD(path));
-
         return mjml2html(mjml, {
             beautify,
             filePath: path,
